@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="3 Blades - Professional search and rescue drone services, providing cutting-edge aerial support for emergency operations">
+    <meta name="description" content="3 Bladez - Professional search and rescue drone services, providing cutting-edge aerial support for emergency operations">
     <meta name="keywords" content="drone services, search and rescue, aerial support, emergency response, UAV, drone technology">
+    <meta name="author" content="3 Blades">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#007bff">
+    <link rel="canonical" href="https://3blades.com/">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="3 Blades | Search & Rescue Drone Services">
+    <meta property="og:description" content="Professional search and rescue drone services, providing cutting-edge aerial support for emergency operations">
+    <meta property="og:url" content="https://3blades.com/">
+    <meta property="og:site_name" content="3 Blades">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="3 Blades | Search & Rescue Drone Services">
+    <meta name="twitter:description" content="Professional search and rescue drone services, providing cutting-edge aerial support for emergency operations">
+    
     <title>3 Blades | Search & Rescue Drone Services</title>
     
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Fonts - Modern Sans-Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     
     <style>
         /* Reset and Base Styles */
@@ -22,10 +39,40 @@
         }
 
         body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: #333;
+            font-family: 'Poppins', 'Inter', sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
             scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #00a8cc;
+            --accent-color: #ff6b35;
+            --dark-color: #1a1a1a;
+            --light-color: #f5f7fa;
+            --text-color: #333333;
+            --text-light: #666666;
+            --success-color: #28a745;
+            --danger-color: #dc3545;
+            --spacing-unit: 8px;
+        }
+
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 10px;
+            background: #000;
+            color: #fff;
+            padding: 8px 12px;
+            z-index: 2000;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .skip-link:focus {
+            top: 10px;
         }
 
         .container {
@@ -90,6 +137,19 @@
             color: #007bff;
         }
 
+        .nav-link:focus-visible,
+        .btn-primary:focus-visible,
+        .btn-secondary:focus-visible,
+        .hamburger:focus-visible,
+        .form-group input:focus-visible,
+        .form-group select:focus-visible,
+        .form-group textarea:focus-visible,
+        button:focus-visible,
+        a:focus-visible {
+            outline: 3px solid #0b5fff;
+            outline-offset: 2px;
+        }
+
         .emergency-btn {
             background: #dc3545 !important;
             color: white !important;
@@ -112,6 +172,8 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
+            background: transparent;
+            border: none;
         }
 
         .hamburger span {
@@ -122,64 +184,140 @@
             transition: 0.3s;
         }
 
-        /* Hero Section */
+        /* Hero Section - Full Viewport with Bold Typography */
         .hero {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 120px 0 80px;
+            position: relative;
             min-height: 100vh;
             display: flex;
             align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.95) 0%, rgba(0, 168, 204, 0.9) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23003d7a" width="1200" height="800"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
         }
 
         .hero-content {
+            position: relative;
+            z-index: 2;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            padding: 0 40px;
+            text-align: center;
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
+            font-size: clamp(2.5rem, 8vw, 5.5rem);
+            font-weight: 800;
             margin-bottom: 1.5rem;
-            line-height: 1.2;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            text-transform: none;
+            animation: fadeInUp 1s ease-out;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
+            font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-weight: 400;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 3;
+        }
+
+        .scroll-indicator i {
+            font-size: 2rem;
+            color: white;
+            opacity: 0.8;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-image {
+            display: none;
         }
 
         .btn-primary, .btn-secondary {
-            padding: 12px 30px;
+            padding: 16px 40px;
             text-decoration: none;
             border-radius: 50px;
             font-weight: 600;
             transition: all 0.3s ease;
             display: inline-block;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
         .btn-primary {
-            background: #28a745;
+            background: var(--accent-color);
             color: white;
-            border: 2px solid #28a745;
+            border: 2px solid var(--accent-color);
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
         }
 
         .btn-primary:hover {
-            background: #218838;
-            border-color: #218838;
-            transform: translateY(-2px);
+            background: #ff5722;
+            border-color: #ff5722;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
         }
 
         .btn-secondary {
@@ -190,69 +328,123 @@
 
         .btn-secondary:hover {
             background: white;
-            color: #667eea;
+            color: var(--primary-color);
+            transform: translateY(-3px);
         }
 
-        .hero-image {
-            text-align: center;
-        }
-
-        /* Services Section */
+        /* Core Values/Services Section - Card-Based Layout */
         .services {
-            padding: 80px 0;
-            background: #f8f9fa;
+            padding: 100px 0;
+            background: var(--light-color);
         }
 
         .services h2 {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--dark-color);
+            font-weight: 800;
+            letter-spacing: -0.02em;
         }
 
         .section-subtitle {
             text-align: center;
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 3rem;
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            color: var(--text-light);
+            margin-bottom: 4rem;
+            font-weight: 400;
         }
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
             margin-top: 3rem;
         }
 
         .service-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card-image::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .service-card-image::after {
+            opacity: 0;
         }
 
         .service-card i {
-            font-size: 3rem;
-            color: #007bff;
-            margin-bottom: 1.5rem;
+            font-size: 4rem;
+            color: white;
+            z-index: 1;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover i {
+            transform: scale(1.1);
+        }
+
+        .service-card-content {
+            padding: 2rem;
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             margin-bottom: 1rem;
-            color: #333;
+            color: var(--dark-color);
+            font-weight: 700;
         }
 
         .service-card p {
             margin-bottom: 1.5rem;
-            color: #666;
+            color: var(--text-light);
+            line-height: 1.7;
         }
 
         .service-card ul {
@@ -350,10 +542,162 @@
             text-align: center;
         }
 
+        .about-icon {
+            font-size: 150px;
+            color: #28a745;
+        }
+
         /* Contact Section */
         .contact {
             padding: 80px 0;
             background: #f8f9fa;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background: white;
+            position: relative;
+        }
+
+        .testimonials h2 {
+            text-align: center;
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .testimonials-container {
+            max-width: 1000px;
+            margin: 4rem auto 0;
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: var(--light-color);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .testimonial-card.active {
+            opacity: 1;
+        }
+
+        .testimonial-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 1.5rem;
+            overflow: hidden;
+            border: 4px solid white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .testimonial-photo i {
+            font-size: 3rem;
+            color: white;
+        }
+
+        .testimonial-quote {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--text-color);
+            margin-bottom: 2rem;
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial-quote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--primary-color);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--dark-color);
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-role {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+
+        .testimonial-company {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .testimonial-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-dot.active {
+            background: var(--primary-color);
+            width: 30px;
+            border-radius: 6px;
+        }
+
+        .testimonial-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .testimonial-nav:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .testimonial-nav.prev {
+            left: -70px;
+        }
+
+        .testimonial-nav.next {
+            right: -70px;
         }
 
         .contact h2 {
@@ -538,6 +882,40 @@
             color: #dc3545;
         }
 
+        .footer-social {
+            margin-top: 1.5rem;
+        }
+
+        .footer-social h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            font-size: 1.1rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-color);
+            transform: translateY(-3px);
+        }
+
         .footer-bottom {
             border-top: 1px solid #555;
             padding-top: 1rem;
@@ -611,6 +989,27 @@
                 grid-template-columns: 1fr;
                 text-align: center;
             }
+
+            .testimonial-nav {
+                display: none;
+            }
+
+            .scroll-indicator {
+                bottom: 20px;
+            }
+
+            .cookie-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cookie-buttons {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
         }
 
         @media (max-width: 480px) {
@@ -629,45 +1028,60 @@
                 padding: 1.5rem;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
     </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Header Section -->
     <header id="header">
-        <nav class="navbar">
+        <nav class="navbar" aria-label="Primary">
             <div class="nav-container">
                 <div class="logo">
-                    <i class="fas fa-helicopter"></i>
+                    <i class="fas fa-helicopter" aria-hidden="true"></i>
                     <span>3 Blades</span>
                 </div>
-                <ul class="nav-menu">
+                <ul class="nav-menu" id="primary-navigation" aria-label="Main navigation">
                     <li><a href="#home" class="nav-link">Home</a></li>
                     <li><a href="#services" class="nav-link">Services</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                     <li><a href="#contact" class="nav-link emergency-btn">Emergency</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Toggle navigation menu" aria-controls="primary-navigation" aria-expanded="false" type="button">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
 
+    <main id="main-content" tabindex="-1">
+
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Professional Search & Rescue Drone Services</h1>
-            <p>When every second counts, 3 Blades delivers cutting-edge aerial support for emergency operations, missing person searches, and critical rescue missions.</p>
+            <h1>Saving Lives Through Advanced Drone Technology</h1>
+            <p>When every second counts, 3 Blades delivers cutting-edge aerial support for search and rescue operations. We combine professional expertise with state-of-the-art drone technology to provide rapid response when it matters most.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">Request Emergency Support</a>
-                <a href="#services" class="btn-secondary">Our Services</a>
+                <a href="#services" class="btn-secondary">Learn More</a>
             </div>
         </div>
-        <div class="hero-image">
-            <i class="fas fa-drone" style="font-size: 200px; color: #007bff; opacity: 0.8;"></i>
+        <div class="scroll-indicator" onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})" 
+             onkeypress="if(event.key==='Enter'||event.key===' ') document.querySelector('#services').scrollIntoView({behavior: 'smooth'})"
+             tabindex="0" role="button" aria-label="Scroll to services section">
+            <i class="fas fa-chevron-down"></i>
         </div>
     </section>
 
@@ -679,39 +1093,51 @@
             
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-search-location"></i>
-                    <h3>Missing Person Search</h3>
-                    <p>Rapid deployment of thermal imaging drones to locate missing persons in challenging terrain and weather conditions.</p>
-                    <ul>
-                        <li>Thermal imaging cameras</li>
-                        <li>High-resolution optical sensors</li>
-                        <li>Real-time GPS tracking</li>
-                        <li>Night vision capabilities</li>
-                    </ul>
+                    <div class="service-card-image">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Missing Person Search</h3>
+                        <p>Rapid deployment of thermal imaging drones to locate missing persons in challenging terrain and weather conditions.</p>
+                        <ul>
+                            <li>Thermal imaging cameras</li>
+                            <li>High-resolution optical sensors</li>
+                            <li>Real-time GPS tracking</li>
+                            <li>Night vision capabilities</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <i class="fas fa-helicopter"></i>
-                    <h3>Emergency Response</h3>
-                    <p>Immediate aerial assessment and support for natural disasters, accidents, and emergency situations.</p>
-                    <ul>
-                        <li>Disaster area mapping</li>
-                        <li>Live video streaming</li>
-                        <li>Emergency supply delivery</li>
-                        <li>Communication relay</li>
-                    </ul>
+                    <div class="service-card-image">
+                        <i class="fas fa-helicopter"></i>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Emergency Response</h3>
+                        <p>Immediate aerial assessment and support for natural disasters, accidents, and emergency situations.</p>
+                        <ul>
+                            <li>Disaster area mapping</li>
+                            <li>Live video streaming</li>
+                            <li>Emergency supply delivery</li>
+                            <li>Communication relay</li>
+                        </ul>
+                    </div>
                 </div>
                 
                 <div class="service-card">
-                    <i class="fas fa-mountain"></i>
-                    <h3>Wilderness Rescue</h3>
-                    <p>Specialized operations in remote and difficult-to-access locations including mountains, forests, and water bodies.</p>
-                    <ul>
-                        <li>All-terrain capability</li>
-                        <li>Extended flight range</li>
-                        <li>Weather-resistant equipment</li>
-                        <li>Coordinates with ground teams</li>
-                    </ul>
+                    <div class="service-card-image">
+                        <i class="fas fa-mountain"></i>
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Wilderness Rescue</h3>
+                        <p>Specialized operations in remote and difficult-to-access locations including mountains, forests, and water bodies.</p>
+                        <ul>
+                            <li>All-terrain capability</li>
+                            <li>Extended flight range</li>
+                            <li>Weather-resistant equipment</li>
+                            <li>Coordinates with ground teams</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -722,8 +1148,8 @@
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>About 3 Blades</h2>
-                    <p>With over a decade of combined experience in emergency response and drone technology, 3 Blades specializes in providing professional UAV services for search and rescue operations.</p>
+                    <h2>About 3 Bladez</h2>
+                    <p>With over a decade of combined experience in emergency response and drone technology, 3 Bladez specializes in providing professional UAV services for search and rescue operations.</p>
                     
                     <div class="stats">
                         <div class="stat">
@@ -745,15 +1171,78 @@
                     
                     <h3>Certifications & Training</h3>
                     <ul class="certifications">
-                        <li><i class="fas fa-certificate"></i> FAA Part 107 Certified Pilots</li>
-                        <li><i class="fas fa-certificate"></i> Search and Rescue Operations Training</li>
-                        <li><i class="fas fa-certificate"></i> Emergency Response Certified</li>
-                        <li><i class="fas fa-certificate"></i> Thermal Imaging Specialist</li>
+                        <li><i class="fas fa-certificate" aria-hidden="true"></i> FAA Part 107 Certified Pilots</li>
+                        <li><i class="fas fa-certificate" aria-hidden="true"></i> Search and Rescue Operations Training</li>
+                        <li><i class="fas fa-certificate" aria-hidden="true"></i> Emergency Response Certified</li>
+                        <li><i class="fas fa-certificate" aria-hidden="true"></i> Thermal Imaging Specialist</li>
                     </ul>
                 </div>
                 
                 <div class="about-image">
-                    <i class="fas fa-users-rescue" style="font-size: 150px; color: #28a745;"></i>
+                    <i class="fas fa-users-rescue about-icon" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <p class="section-subtitle">Trusted by emergency services and rescue organizations</p>
+            
+            <div class="testimonials-container">
+                <button class="testimonial-nav prev" onclick="previousTestimonial()">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                
+                <div class="testimonial-card active" data-testimonial="0">
+                    <div class="testimonial-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p class="testimonial-quote">
+                        The 3 Blades team responded within minutes of our call. Their thermal imaging drone located our missing hiker in dense forest where ground teams couldn't reach. They literally saved a life that night.
+                    </p>
+                    <div class="testimonial-author">Chief Michael Rodriguez</div>
+                    <div class="testimonial-role">
+                        Fire Chief, <span class="testimonial-company">Mountain Valley Fire Department</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-testimonial="1">
+                    <div class="testimonial-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p class="testimonial-quote">
+                        During the recent flooding, 3 Blades provided critical aerial assessment that helped us prioritize rescue operations. Their professional team and advanced equipment are unmatched.
+                    </p>
+                    <div class="testimonial-author">Sarah Chen</div>
+                    <div class="testimonial-role">
+                        Operations Director, <span class="testimonial-company">State Emergency Services</span>
+                    </div>
+                </div>
+
+                <div class="testimonial-card" data-testimonial="2">
+                    <div class="testimonial-photo">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <p class="testimonial-quote">
+                        We've partnered with 3 Blades for over three years. Their reliability, professionalism, and cutting-edge technology make them our first call for any aerial search and rescue mission.
+                    </p>
+                    <div class="testimonial-author">Lieutenant James Patterson</div>
+                    <div class="testimonial-role">
+                        Search & Rescue Coordinator, <span class="testimonial-company">County Sheriff's Office</span>
+                    </div>
+                </div>
+
+                <button class="testimonial-nav next" onclick="nextTestimonial()">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+
+                <div class="testimonial-controls">
+                    <button class="testimonial-dot active" onclick="goToTestimonial(0)"></button>
+                    <button class="testimonial-dot" onclick="goToTestimonial(1)"></button>
+                    <button class="testimonial-dot" onclick="goToTestimonial(2)"></button>
                 </div>
             </div>
         </div>
@@ -762,36 +1251,36 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2>Contact 3 Blades</h2>
+            <h2>Contact 3 Bladez</h2>
             <p class="section-subtitle">Ready to respond when you need us most</p>
             
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="emergency-contact">
-                        <h3><i class="fas fa-exclamation-triangle"></i> Emergency Line</h3>
+                        <h3><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> Emergency Line</h3>
                         <p class="emergency-number">1-800-3BLADES</p>
                         <p>Available 24/7 for urgent search and rescue operations</p>
                     </div>
                     
                     <div class="contact-details">
                         <div class="contact-item">
-                            <i class="fas fa-phone"></i>
+                            <i class="fas fa-phone" aria-hidden="true"></i>
                             <div>
                                 <h4>Business Line</h4>
-                                <p>(555) 123-4567</p>
+                                <p><a href="tel:+15551234567" aria-label="Call business line at 555 123 4567">(555) 123-4567</a></p>
                             </div>
                         </div>
                         
                         <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                             <div>
                                 <h4>Email</h4>
-                                <p>info@3blades.com</p>
+                                <p><a href="mailto:info@3blades.com">info@3blades.com</a></p>
                             </div>
                         </div>
                         
                         <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                             <div>
                                 <h4>Location</h4>
                                 <p>Serving the Greater Metropolitan Area<br>Response radius: 200 miles</p>
@@ -801,11 +1290,11 @@
                 </div>
                 
                 <div class="contact-form">
-                    <h3>Request Service</h3>
-                    <form id="contactForm">
+                    <h3 id="form-heading">Request Service</h3>
+                    <form id="contactForm" aria-labelledby="form-heading">
                         <div class="form-group">
-                            <label for="urgency">Urgency Level:</label>
-                            <select id="urgency" name="urgency" required>
+                            <label for="urgency">Urgency Level: <abbr title="required" aria-label="required">*</abbr></label>
+                            <select id="urgency" name="urgency" required aria-required="true">
                                 <option value="">Select urgency level</option>
                                 <option value="emergency">Emergency - Immediate Response</option>
                                 <option value="urgent">Urgent - Within 2 hours</option>
@@ -816,25 +1305,25 @@
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="name" required>
+                                <label for="name">Name: <abbr title="required" aria-label="required">*</abbr></label>
+                                <input type="text" id="name" name="name" required aria-required="true" autocomplete="name">
                             </div>
                             
                             <div class="form-group">
                                 <label for="organization">Organization:</label>
-                                <input type="text" id="organization" name="organization">
+                                <input type="text" id="organization" name="organization" autocomplete="organization">
                             </div>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="phone">Phone:</label>
-                                <input type="tel" id="phone" name="phone" required>
+                                <label for="phone">Phone: <abbr title="required" aria-label="required">*</abbr></label>
+                                <input type="tel" id="phone" name="phone" required aria-required="true" placeholder="(555) 123-4567" autocomplete="tel">
                             </div>
                             
                             <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
+                                <label for="email">Email: <abbr title="required" aria-label="required">*</abbr></label>
+                                <input type="email" id="email" name="email" required aria-required="true" placeholder="your@email.com" autocomplete="email">
                             </div>
                         </div>
                         
@@ -844,8 +1333,8 @@
                         </div>
                         
                         <div class="form-group">
-                            <label for="message">Mission Details:</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Describe the situation, terrain, weather conditions, and any other relevant information..." required></textarea>
+                            <label for="message">Mission Details: <abbr title="required" aria-label="required">*</abbr></label>
+                            <textarea id="message" name="message" rows="4" placeholder="Describe the situation, terrain, weather conditions, and any other relevant information..." required aria-required="true"></textarea>
                         </div>
                         
                         <button type="submit" class="btn-primary">Submit Request</button>
@@ -860,9 +1349,20 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <i class="fas fa-helicopter"></i>
+                    <i class="fas fa-helicopter" aria-hidden="true"></i>
                     <span>3 Blades</span>
                     <p>Professional Search & Rescue Drone Services</p>
+                    
+                    <div class="footer-social">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
@@ -876,7 +1376,7 @@
                 
                 <div class="footer-emergency">
                     <h4>Emergency Response</h4>
-                    <p class="emergency-number">1-800-3BLADES</p>
+                    <p class="emergency-number"><a href="#contact" aria-label="Navigate to emergency contact form">Contact Us</a></p>
                     <p>Available 24/7</p>
                 </div>
             </div>
@@ -885,25 +1385,85 @@
                 <p>&copy; 2025 3 Blades. All rights reserved. | Professional drone services for search and rescue operations.</p>
             </div>
         </div>
+    </main>
+
     </footer>
 
     <script>
+        // Intersection Observer for Animation on Scroll (defined early for use in DOMContentLoaded)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
         // Mobile Navigation Toggle
         document.addEventListener('DOMContentLoaded', function() {
             const hamburger = document.querySelector('.hamburger');
             const navMenu = document.querySelector('.nav-menu');
+            const menuLinks = navMenu.querySelectorAll('.nav-link');
+            const mobileMenuQuery = window.matchMedia('(max-width: 768px)');
+
+            const syncMenuAccessibility = function(isExpanded) {
+                const isMobile = mobileMenuQuery.matches;
+
+                hamburger.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
+
+                if (isMobile) {
+                    navMenu.classList.toggle('active', isExpanded);
+                    navMenu.setAttribute('aria-hidden', isExpanded ? 'false' : 'true');
+                    menuLinks.forEach(link => {
+                        link.tabIndex = isExpanded ? 0 : -1;
+                    });
+                    return;
+                }
+
+                navMenu.classList.remove('active');
+                navMenu.removeAttribute('aria-hidden');
+                menuLinks.forEach(link => {
+                    link.removeAttribute('tabindex');
+                });
+                hamburger.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+            };
             
-            hamburger.addEventListener('click', function() {
-                hamburger.classList.toggle('active');
-                navMenu.classList.toggle('active');
+            // Toggle hamburger menu
+            const toggleMenu = function() {
+                const expanded = !hamburger.classList.contains('active');
+                hamburger.classList.toggle('active', expanded);
+                syncMenuAccessibility(expanded);
+            };
+            
+            hamburger.addEventListener('click', toggleMenu);
+            mobileMenuQuery.addEventListener('change', function() {
+                syncMenuAccessibility(false);
             });
+            syncMenuAccessibility(false);
             
             // Close mobile menu when clicking on a link
-            document.querySelectorAll('.nav-link').forEach(link => {
+            menuLinks.forEach(link => {
                 link.addEventListener('click', () => {
                     hamburger.classList.remove('active');
-                    navMenu.classList.remove('active');
+                    syncMenuAccessibility(false);
                 });
+            });
+
+            // Observe service cards and other elements for animation
+            const animateElements = document.querySelectorAll('.service-card, .stat, .contact-item');
+            
+            animateElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
             });
         });
 
@@ -925,11 +1485,24 @@
             });
         });
 
-        // Active Navigation Highlighting
+        // Combined Scroll Handler for Header and Navigation
+        let lastScrollY = 0;
         window.addEventListener('scroll', function() {
+            const currentScrollY = window.scrollY;
+            const header = document.getElementById('header');
             const sections = document.querySelectorAll('section[id]');
             const navLinks = document.querySelectorAll('.nav-link');
             
+            // Update header background
+            if (currentScrollY > 50) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            }
+            
+            // Update active navigation highlighting
             let current = '';
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
@@ -946,23 +1519,17 @@
                     link.classList.add('active');
                 }
             });
-        });
-
-        // Header Background on Scroll
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.15)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-            }
+            
+            lastScrollY = currentScrollY;
         });
 
         // Form Validation and Submission
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
+
+            if (!this.reportValidity()) {
+                return;
+            }
             
             // Get form data
             const formData = new FormData(this);
@@ -985,10 +1552,10 @@
                 return;
             }
             
-            // Phone validation
-            const phoneRegex = /^[\d\s\-\+\(\)]+$/;
-            if (!phoneRegex.test(phone)) {
-                alert('Please enter a valid phone number.');
+            // Improved phone validation - requires at least 10 digits, allows common formats
+            const phoneDigits = phone.replace(/\D/g, '');
+            if (phoneDigits.length < 10) {
+                alert('Please enter a valid phone number with at least 10 digits.');
                 return;
             }
             
@@ -996,9 +1563,9 @@
             if (urgency === 'emergency') {
                 const confirmEmergency = confirm(
                     'EMERGENCY REQUEST DETECTED!\n\n' +
-                    'For immediate emergency response, please call:\n' +
-                    '1-800-3BLADES (1-800-325-2337)\n\n' +
-                    'Would you like to continue submitting this form as well?'
+                    'This form will be submitted for immediate emergency response.\n' +
+                    'Our team will contact you using the information provided.\n\n' +
+                    'Would you like to continue submitting this emergency request?'
                 );
                 
                 if (!confirmEmergency) {
@@ -1012,6 +1579,7 @@
             
             submitButton.textContent = 'Sending...';
             submitButton.disabled = true;
+            submitButton.setAttribute('aria-busy', 'true');
             
             // Simulate API call
             setTimeout(() => {
@@ -1019,6 +1587,7 @@
                 this.reset();
                 submitButton.textContent = originalText;
                 submitButton.disabled = false;
+                submitButton.removeAttribute('aria-busy');
                 
                 // For emergency requests, show additional instructions
                 if (urgency === 'emergency') {
@@ -1085,6 +1654,111 @@
                 console.log('Emergency contact initiated:', new Date().toISOString());
             });
         });
+
+        // Testimonials Carousel
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-card');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        const TESTIMONIAL_ROTATION_INTERVAL_MS = 7000;
+
+        function showTestimonial(index) {
+            testimonials.forEach((card, i) => {
+                card.classList.remove('active');
+                if (i === index) {
+                    card.classList.add('active');
+                }
+            });
+            
+            dots.forEach((dot, i) => {
+                dot.classList.remove('active');
+                if (i === index) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+
+        function nextTestimonial() {
+            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        function previousTestimonial() {
+            currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+            showTestimonial(currentTestimonial);
+        }
+
+        function goToTestimonial(index) {
+            currentTestimonial = index;
+            showTestimonial(currentTestimonial);
+        }
+
+        // Auto-rotate testimonials
+        setInterval(nextTestimonial, TESTIMONIAL_ROTATION_INTERVAL_MS);
+
+        // Scroll Progress Indicator
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            
+            let progressBar = document.querySelector('.scroll-progress');
+            if (!progressBar) {
+                progressBar = document.createElement('div');
+                progressBar.className = 'scroll-progress';
+                document.body.appendChild(progressBar);
+            }
+            progressBar.style.width = scrolled + '%';
+        });
+
+        // Cookie Consent - Initialize after DOM is loaded
+        const COOKIE_CONSENT_DELAY_MS = 2000;
+        
+        // Check if user has already accepted cookies
+        if (!localStorage.getItem('cookiesAccepted')) {
+            setTimeout(() => {
+                const cookieConsent = document.querySelector('.cookie-consent');
+                if (cookieConsent) {
+                    cookieConsent.classList.add('show');
+                }
+            }, COOKIE_CONSENT_DELAY_MS);
+        }
+        
+        // Add event listeners for cookie buttons
+        const acceptBtn = document.getElementById('acceptCookies');
+        const declineBtn = document.getElementById('declineCookies');
+        
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookiesAccepted', 'true');
+                const cookieConsent = document.querySelector('.cookie-consent');
+                if (cookieConsent) {
+                    cookieConsent.classList.remove('show');
+                }
+            });
+        }
+        
+        if (declineBtn) {
+            declineBtn.addEventListener('click', function() {
+                const cookieConsent = document.querySelector('.cookie-consent');
+                if (cookieConsent) {
+                    cookieConsent.classList.remove('show');
+                }
+            });
+        }
     </script>
+
+    <!-- Cookie Consent Notice -->
+    <div class="cookie-consent">
+        <div class="cookie-content">
+            <div class="cookie-text">
+                <h4><i class="fas fa-cookie-bite"></i> Cookie Notice</h4>
+                <p>We use cookies to enhance your experience and analyze site usage. By continuing to browse, you agree to our use of cookies.</p>
+            </div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn accept" id="acceptCookies">Accept</button>
+                <button class="cookie-btn decline" id="declineCookies">Decline</button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
