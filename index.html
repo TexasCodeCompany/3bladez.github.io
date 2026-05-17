@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="3 Bladez - Professional search and rescue drone services, providing cutting-edge aerial support for emergency operations">
-    <meta name="keywords" content="drone services, search and rescue, aerial support, emergency response, UAV, drone technology">
+    <meta name="description" content="3 Bladez supports search and rescue teams with advanced drone technology. Support services do not perform services. Instead, the support services provide the technology that helps first responders.">
+    <meta name="keywords" content="drone services, search and rescue, first responder technology, emergency response, UAV, drone technology">
     <meta name="author" content="3 Blades">
     <meta name="robots" content="index,follow">
     <meta name="theme-color" content="#007bff">
@@ -13,14 +13,14 @@
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="3 Blades | Search & Rescue Drone Services">
-    <meta property="og:description" content="Professional search and rescue drone services, providing cutting-edge aerial support for emergency operations">
+    <meta property="og:description" content="Support services do not perform services. Instead, the support services provide the technology that helps first responders.">
     <meta property="og:url" content="https://3blades.com/">
     <meta property="og:site_name" content="3 Blades">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="3 Blades | Search & Rescue Drone Services">
-    <meta name="twitter:description" content="Professional search and rescue drone services, providing cutting-edge aerial support for emergency operations">
+    <meta name="twitter:description" content="Support services do not perform services. Instead, the support services provide the technology that helps first responders.">
     
     <title>3 Blades | Search & Rescue Drone Services</title>
     
@@ -547,6 +547,100 @@
             color: #28a745;
         }
 
+        /* Future Technology Section */
+        .future-tech {
+            padding: 100px 0;
+            background: var(--light-color);
+        }
+
+        .future-tech h2 {
+            text-align: center;
+            font-size: clamp(2.2rem, 5vw, 3.2rem);
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .future-intro {
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            color: var(--text-color);
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .support-message {
+            max-width: 950px;
+            margin: 0 auto 2.5rem;
+            padding: 1rem 1.25rem;
+            border-left: 4px solid var(--primary-color);
+            background: rgba(0, 102, 204, 0.08);
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .future-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .future-card {
+            background: white;
+            border-radius: 14px;
+            padding: 1.5rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .future-card h3 {
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            font-size: 1.25rem;
+        }
+
+        .future-card ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .future-card li {
+            position: relative;
+            padding-left: 1rem;
+            margin-bottom: 0.6rem;
+            color: var(--text-light);
+        }
+
+        .future-card li::before {
+            content: '\2022';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-weight: 700;
+        }
+
+        .impact-list {
+            list-style: none;
+            margin: 0 0 1.5rem;
+            padding: 0;
+        }
+
+        .impact-list li {
+            margin-bottom: 0.7rem;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        .future-close {
+            background: white;
+            border-radius: 12px;
+            padding: 1.25rem;
+            color: var(--text-color);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+        }
+
         /* Contact Section */
         .contact {
             padding: 80px 0;
@@ -977,6 +1071,10 @@
                 grid-template-columns: 1fr;
             }
 
+            .future-grid {
+                grid-template-columns: 1fr;
+            }
+
             .contact-content {
                 grid-template-columns: 1fr;
             }
@@ -1072,7 +1170,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Saving Lives Through Advanced Drone Technology</h1>
-            <p>When every second counts, 3 Blades delivers cutting-edge aerial support for search and rescue operations. We combine professional expertise with state-of-the-art drone technology to provide rapid response when it matters most.</p>
+            <p>When every second counts, 3 Blades delivers mission-ready drone technology for search and rescue operations. Support services do not perform services. Instead, the support services provide the technology that helps first responders.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn-primary">Request Emergency Support</a>
                 <a href="#services" class="btn-secondary">Learn More</a>
@@ -1182,6 +1280,68 @@
                     <i class="fas fa-users-rescue about-icon" aria-hidden="true"></i>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Future Technology Section -->
+    <section id="future-tech" class="future-tech">
+        <div class="container">
+            <h2>Future Drone Technology Needs for Search &amp; Rescue</h2>
+            <p class="future-intro">Drones have already transformed SAR operations by enabling faster aerial surveys, thermal detection, and payload delivery. To maximize lives saved, the next generation of drone technology must address current limitations in endurance, autonomy, coverage, and harsh-environment performance.</p>
+            <p class="support-message">Support services do not perform services. Instead, the support services provide the technology that helps first responders.</p>
+
+            <div class="future-grid">
+                <article class="future-card">
+                    <h3>1. Advanced Autonomy &amp; AI</h3>
+                    <ul>
+                        <li>Onboard AI for real-time victim detection, fewer false positives, and intelligent search-path optimization.</li>
+                        <li>Fully autonomous missions with minimal human oversight, including GPS-denied navigation in caves, forests, and rubble.</li>
+                        <li>Swarm coordination for large-scale parallel coverage.</li>
+                    </ul>
+                </article>
+
+                <article class="future-card">
+                    <h3>2. Extended Endurance &amp; Power</h3>
+                    <ul>
+                        <li>60 to 120+ minute flight times through next-generation batteries, hybrid propulsion, and solar integration.</li>
+                        <li>Heavy-lift capability of 50 to 100+ lbs for rescue litters, medical supplies, and flotation devices.</li>
+                    </ul>
+                </article>
+
+                <article class="future-card">
+                    <h3>3. Multi-Modal Sensors &amp; Detection</h3>
+                    <ul>
+                        <li>Enhanced thermal, LiDAR, multispectral, radar, and signal-detection payloads.</li>
+                        <li>All-weather performance in low-visibility and contaminated environments.</li>
+                    </ul>
+                </article>
+
+                <article class="future-card">
+                    <h3>4. Reliable BVLOS Connectivity</h3>
+                    <ul>
+                        <li>Satellite and hybrid 5G/mesh networks for beyond-visual-line-of-sight operations.</li>
+                        <li>Real-time high-definition video and data streaming to incident commanders.</li>
+                    </ul>
+                </article>
+
+                <article class="future-card">
+                    <h3>5. Rugged, Multi-Domain Platforms</h3>
+                    <ul>
+                        <li>Weather-resistant, waterproof, and modular platform designs.</li>
+                        <li>Hybrid aerial/ground systems and specialized variants for mountain, maritime, urban, and wilderness SAR.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <h3>Strategic Impact for SAR Teams</h3>
+            <ul class="impact-list">
+                <li>Dramatically reduced search times</li>
+                <li>Lower risk to ground teams</li>
+                <li>Scalable operations in remote or disaster zones</li>
+                <li>Seamless integration with Drone-as-First-Responder (DFR) programs</li>
+            </ul>
+
+            <p class="future-close">At <a href="https://3bladez.com/" target="_blank" rel="noopener noreferrer">3bladez.com</a>, we specialize in delivering cutting-edge drone solutions tailored to these future SAR requirements, helping rescue organizations adopt the most effective technology today while preparing for tomorrow's challenges.</p>
         </div>
     </section>
 
